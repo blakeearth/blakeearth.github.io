@@ -6,8 +6,8 @@ I like to take song lyrics as statuses. They help me sum up how I'm feeling over
 	- Set 8/24/19, Tessa Violet's "Bad Ideas"
 
 ## Past Statuses
-1. 🕊️ *Handmade heaven*
-	- Marina's "Handmade Heaven"
+1. 🕊️ *Handmade Heaven*
+	- Set 2/9/19, Marina's "Handmade Heaven"
 2. ⏳ *Backup makeshift life*
 	- Imogen Heap's "Wait it Out"
 3. 🌳 *Forming empires in the shade of trees*
