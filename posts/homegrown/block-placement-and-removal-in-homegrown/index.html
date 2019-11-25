@@ -2,7 +2,7 @@
 	<!DOCTYPE html>
 	<html lang=en>
 	<head>
-		<title>Block Placement and Removal in Homegrown</title>
+		<title>Filed in /posts/homegrown/block-placement-and-removal-in-homegrown/</title>
 		<meta name="viewport" content="width=device-width">
 		<link rel=icon href=data:,>
 		<style>
@@ -23,6 +23,10 @@
 			margin-right: auto;
 			max-width: 70%;
 		}
+		nav {
+			list-style-type: none;
+			padding: 1rem 0;
+		}
 		a {
 			text-decoration: none;
 			outline: 0;
@@ -37,33 +41,12 @@
 	</head>
 		<body>
 			<main>
-				<h1>Block Placement and Removal in Homegrown</h1>
-
-<p><a href="https://blake.earth/tag:Homegrown">Homegrown</a> is a W.I.P. <a href="https://github.com/blakeearth/homegrown">open-source game</a> I&rsquo;ve been working on off-and-on for about a year. It&rsquo;s a multiplayer game in which players grow and build up their own small islands, accepting other players as visitors (and collaborators, should owners extend permission). Players can open up shops to trade their goods and invite N.P.C.s to their islands who trade with players and interact with the island. Players can also add behaviors to animate their in-game models and make them interactive.</p>
-
-<p>Rarely do motivation and free time align, so I&rsquo;m taking development slowly but surely. A lot of the groundwork for these systems is already laid. As of now, I have accounts management, server connections, models (i.e. block placement, removal and selection), syncing of models, syncing of multiplayer player movements, and world and inventory saving. Frustratingly, not much of this is worth showing off to friends and family; it&rsquo;s hard to see the work I&rsquo;ve done on the surface level. The game isn&rsquo;t a game yet but a collection of conversing, interactive systems.</p>
-
-<p>The most recent completed implementation is block placement and removal. I don&rsquo;t claim that my method of doing this is the best, but it seems to work fairly well (and remains fast at relatively large scale). Here&rsquo;s how that looks (roughly):</p>
-
-<ol>
-<li>Models (essentially collections of blocks) have three layers of tiles: one to be viewed in front of the player (without collision), one to be rendered alongside the player (with collisions), and one behind the player (without collisions). Models have a method to place blocks that preliminarily verifies the placement and then request the placement server-side. For speed reasons, the block is placed client-side immediately. Each time a new block is placed, the model recalculates its outline.</li>
-<li>If the placement is successful, the server-side representation of the model reserves that block and layer world-/island-wide so other models can&rsquo;t place blocks there and sends a message to all other clients telling them to place a block there. If verification is not successful, we tell the requesting client to remove the block. Verification (mainly) consists of verifying the item is in the player&rsquo;s inventory, checking that there is an adjacent block (world-wide), and checking that the requesting client has the right permissions. There&rsquo;s a similar verification process for removal of blocks.</li>
-<li>Models are selected for editing by hovering over them with a mouse. The world gets the mouse position, checks if the mouse&rsquo;s position aligns with a reserved block coordinate, and if it does, tells that model to display its outline. If the player clicks the model, they begin editing it. If they right-click, the world calls the edited model&rsquo;s place block method. Similarly, clicking removes the hovered block.</li>
-</ol>
-
-<p>Models, like worlds, are saved server-side only and transmitted to players as needed.</p>
-
-<p>If you&rsquo;re interested in future posts about my game development process and other topics, subscribe via email and get them right in your inbox.</p>
-
-<!--emailsub-->
-
-<p>You&rsquo;re also welcome to subscribe via R.S.S. or follow the development on the Fediverse (@house-mangrove@write.as).</p>
-
-<p>Up next, I&rsquo;m working on the G.U.I. for editing model properties and making servers/accounts easier to save in-game.</p>
-
-<h1>Homegrown #Gamedev</h1>
-
-				<h4>Filed in <a href="/posts/homegrown/">/posts/homegrown/</a></h4>
+				
+				</hr>
+				<nav>
+					<h2>Filed in <a href="/posts/homegrown/block-placement-and-removal-in-homegrown/">/posts/homegrown/block-placement-and-removal-in-homegrown/</a></h2>
+					
+				</nav>
 			</main>
 		</body>
 	</html>

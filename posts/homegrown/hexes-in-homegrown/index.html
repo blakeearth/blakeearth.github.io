@@ -2,7 +2,7 @@
 	<!DOCTYPE html>
 	<html lang=en>
 	<head>
-		<title>Hexes in Homegrown</title>
+		<title>Filed in /posts/homegrown/hexes-in-homegrown/</title>
 		<meta name="viewport" content="width=device-width">
 		<link rel=icon href=data:,>
 		<style>
@@ -23,6 +23,10 @@
 			margin-right: auto;
 			max-width: 70%;
 		}
+		nav {
+			list-style-type: none;
+			padding: 1rem 0;
+		}
 		a {
 			text-decoration: none;
 			outline: 0;
@@ -37,27 +41,12 @@
 	</head>
 		<body>
 			<main>
-				<h1>Hexes in Homegrown</h1>
-
-<p>Hexes are ways for <a href="https://write.as/house-mangrove/tag:Homegrown">Homegrown</a> players to further interact with models they build. Put simply, players can use a basic visual scripting system to give their models life and help them interact with the world. (Homegrown is a work in progress and is not at all ready for players, but I&rsquo;ve been working on it for quite some time now.)</p>
-
-<p>Each hex has a &ldquo;root condition&rdquo; that causes the hex to work. These conditions are split into triggers and gates. Triggers are conditions in the in-game world that players might want their models to observe: it&rsquo;s nighttime or daytime, it&rsquo;s sunny or rainy, a player just pressed a key, a player just said a special phrase in the chat, a model announced something (this works something like a function call), or something else. Gates are conditions that are true or false based on the states of other conditions. They are logic gates, and for now the game has three of them: And, Or, and Nand. Each gate can have any number of inputs.</p>
-
-<p>When the &ldquo;root condition&rdquo; (usually the last logic gate) is true, the hex executes some combination of actions, like move, wait some time, place blocks from an inventory, turn invisible, interact with players, send announcements to any listening models, or do something else.</p>
-
-<p>Server-side, this essentially works the way I described it: a Condition observes the world and triggers a sequence of events when its corresponding &ldquo;root condition&rdquo; is active.</p>
-
-<p>Client-side, the hexes are constructed using a drag-and-drop system. Players drag modules from a drawer and drop them into a graph edit region (that uses Godot&rsquo;s GraphEdit), where they can attach modules in a visual-scripting-like fashion. Gates have left connections from Conditions and right connections to other Gates or Actions; Triggers have no left connections and right connections to Gates or Actions. Actions only have Action right connections. Players can drag these right and left nodules to one another.</p>
-
-<p>Once players are finished, they send the server a dictionary (in a <code>.json</code>-like format) that parses and validates the hex. The root Condition is the deepest Condition in the logic thread, and it is written first. Each other Condition is stored within the Condition providing its input. Conversely, Actions store the nodes that they provide output to. This format makes it easier for the server to construct the hex using its corresponding classes.</p>
-
-<p>As of the time of writing, I have finished the code for most of the server-side work and a large chunk of the client-side work, but I have not written the system to prepare the hex client-side to be sent to the server. Since no information about individual models and hexes is stored client-side, I am somewhat concerned about reconstructing the hex information when it needs to be edited client-side. Should the server send clients a similar <code>.json</code> file when they ask to edit? Should the server remember the positions of the modules in the hex editor window? I will be thinking about these questions as I implement the parser.</p>
-
-<p>The hex system is heavily influenced by the Behaviors system in the late LEGO Universe. I&rsquo;ll leave you with some related content about that game. Find a demonstration of the Behaviors system in <a href="https://youtu.be/Zt8rxOTf7Pk?t=152">this demo video from E3 2010</a> (the relevant portion starts at 2:32). <a href="https://www.youtube.com/watch?v=hqDp7fRNZ_o">This video</a> is also really interesting; it shows a discussion between some LEGO Universe developers about the Behaviors system, and watching that discussion helped me frame my own planning on the subject (including dealing with questions like &ldquo;how can I be sure players won&rsquo;t crash my server?&rdquo;).</p>
-
-<h1>Homegrown #Gamedev</h1>
-
-				<h4>Filed in <a href="/posts/homegrown/">/posts/homegrown/</a></h4>
+				
+				</hr>
+				<nav>
+					<h2>Filed in <a href="/posts/homegrown/hexes-in-homegrown/">/posts/homegrown/hexes-in-homegrown/</a></h2>
+					
+				</nav>
 			</main>
 		</body>
 	</html>
