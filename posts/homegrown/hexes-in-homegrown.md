@@ -1,0 +1,19 @@
+# Hexes in Homegrown
+
+Hexes are ways for [Homegrown](https://write.as/house-mangrove/tag:Homegrown) players to further interact with models they build. Put simply, players can use a basic visual scripting system to give their models life and help them interact with the world. (Homegrown is a work in progress and is not at all ready for players, but I've been working on it for quite some time now.)
+
+Each hex has a "root condition" that causes the hex to work. These conditions are split into triggers and gates. Triggers are conditions in the in-game world that players might want their models to observe: it's nighttime or daytime, it's sunny or rainy, a player just pressed a key, a player just said a special phrase in the chat, a model announced something (this works something like a function call), or something else. Gates are conditions that are true or false based on the states of other conditions. They are logic gates, and for now the game has three of them: And, Or, and Nand. Each gate can have any number of inputs.
+
+When the "root condition" (usually the last logic gate) is true, the hex executes some combination of actions, like move, wait some time, place blocks from an inventory, turn invisible, interact with players, send announcements to any listening models, or do something else.
+
+Server-side, this essentially works the way I described it: a Condition observes the world and triggers a sequence of events when its corresponding "root condition" is active.
+
+Client-side, the hexes are constructed using a drag-and-drop system. Players drag modules from a drawer and drop them into a graph edit region (that uses Godot's GraphEdit), where they can attach modules in a visual-scripting-like fashion. Gates have left connections from Conditions and right connections to other Gates or Actions; Triggers have no left connections and right connections to Gates or Actions. Actions only have Action right connections. Players can drag these right and left nodules to one another.
+
+Once players are finished, they send the server a dictionary (in a `.json`-like format) that parses and validates the hex. The root Condition is the deepest Condition in the logic thread, and it is written first. Each other Condition is stored within the Condition providing its input. Conversely, Actions store the nodes that they provide output to. This format makes it easier for the server to construct the hex using its corresponding classes.
+
+As of the time of writing, I have finished the code for most of the server-side work and a large chunk of the client-side work, but I have not written the system to prepare the hex client-side to be sent to the server. Since no information about individual models and hexes is stored client-side, I am somewhat concerned about reconstructing the hex information when it needs to be edited client-side. Should the server send clients a similar `.json` file when they ask to edit? Should the server remember the positions of the modules in the hex editor window? I will be thinking about these questions as I implement the parser.
+
+The hex system is heavily influenced by the Behaviors system in the late LEGO Universe. I'll leave you with some related content about that game. Find a demonstration of the Behaviors system in [this demo video from E3 2010](https://youtu.be/Zt8rxOTf7Pk?t=152) (the relevant portion starts at 2:32). [This video](https://www.youtube.com/watch?v=hqDp7fRNZ_o) is also really interesting; it shows a discussion between some LEGO Universe developers about the Behaviors system, and watching that discussion helped me frame my own planning on the subject (including dealing with questions like "how can I be sure players won't crash my server?").
+
+#Homegrown #Gamedev
