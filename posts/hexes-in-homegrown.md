@@ -1,4 +1,4 @@
-# Hexes in Homegrown
+# 🌱 Hexes in Homegrown
 
 Hexes are ways for [Homegrown](https://write.as/house-mangrove/tag:Homegrown) players to further interact with models they build. Put simply, players can use a basic visual scripting system to give their models life and help them interact with the world. (Homegrown is a work in progress and is not at all ready for players, but I've been working on it for quite some time now.)
 

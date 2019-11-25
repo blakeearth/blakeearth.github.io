@@ -1,4 +1,4 @@
-# Block Placement and Removal in Homegrown
+# 🌱 Block Placement and Removal in Homegrown
 
 [Homegrown](https://blake.earth/tag:Homegrown) is a W.I.P. [open-source game](https://github.com/blakeearth/homegrown) I've been working on off-and-on for about a year. It's a multiplayer game in which players grow and build up their own small islands, accepting other players as visitors (and collaborators, should owners extend permission). Players can open up shops to trade their goods and invite N.P.C.s to their islands who trade with players and interact with the island. Players can also add behaviors to animate their in-game models and make them interactive.
 

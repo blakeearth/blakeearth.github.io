@@ -1,4 +1,4 @@
-# Mr. Penumbra's 24-Hour Bookstore by Robin Sloan
+# 📘 Mr. Penumbra's 24-Hour Bookstore by Robin Sloan
 My grandma recommended this book to me after she borrowed it from a friend
 of hers. She told me it had lots of references to coding and technologies
 she didn't understand, but she said I might enjoy it. I did, thoroughly.

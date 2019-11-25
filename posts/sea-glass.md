@@ -1,4 +1,4 @@
-# Looking for Sea Glass on a Tidal Sandbar
+# 🧭 Looking for Sea Glass on a Tidal Sandbar
 
 In an early cloudy August afternoon, my family and I walked to the tip of Great Diamond Island, where we’re staying for a few days. At high tide, Little Diamond Island is visible across a stretch of blue-green water, with just the thin ends of grass blades breaking the surface. But when we arrived at the shore, low tide was just an hour past.
 

@@ -1,4 +1,4 @@
-# Decentralized Online Communities
+# 💻 Decentralized Online Communities
 
 *A rambling discussion of online communities, from Facebook and Discord to an ideal of the entire web as a community and the Fediverse as our burgeoning compromise*
 
