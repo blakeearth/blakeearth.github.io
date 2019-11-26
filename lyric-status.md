@@ -2,7 +2,7 @@
 I like to take song lyrics as statuses. They help me sum up how I'm feeling over a few days or weeks while sharing music.
 
 ## Current Status
-- 💤 You'd think I could sense a trend
+- 💤 You think that I could sense a trend
 	- Set 11/25/19, Tessa Violet's "Bored"
 
 ## Past Statuses
