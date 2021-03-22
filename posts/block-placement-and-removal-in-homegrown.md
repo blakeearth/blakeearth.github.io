@@ -14,9 +14,6 @@ Models, like worlds, are saved server-side only and transmitted to players as ne
 
 If you're interested in future posts about my game development process and other topics, subscribe via email and get them right in your inbox.
 
-<!--emailsub-->
 You're also welcome to subscribe via R.S.S. or follow the development on the Fediverse (@house-mangrove@write.as).
 
 Up next, I'm working on the G.U.I. for editing model properties and making servers/accounts easier to save in-game.
-
-#Homegrown #Gamedev

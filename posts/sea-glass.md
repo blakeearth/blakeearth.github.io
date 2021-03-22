@@ -11,5 +11,3 @@ We circled the sandbar, the cool summer breeze carrying mist to our cheeks. We t
 ![Sea Glass](https://i.snap.as/Lc1bKJN.jpg)
 
 We filled an hour this way before ending our search to head back to Great Diamond Island, and I don’t think we could have stayed much longer. As we reached the end of the sandbar, our feet brushed through a refreshingly chilly, ever-deepening current racing across the shoal.
-
-#Personal #Travel
